@@ -1,0 +1,17 @@
+<div class="row-block-two">
+    <div ng-controller="alertsCtrl" class="widget orange">
+        <div class="widget-title">
+            <h4><i class="fa fa-bell-o icon-padding" aria-hidden="true"></i> Alerts</h4>
+            <span class="widget-options">
+                <a class="fa fa-angle-down icon-padding" aria-hidden="true" href="#"></a>
+                <a class="fa fa-times icon-padding" aria-hidden="true" href="#"></a>
+            </span>
+        </div>
+        <div class="widget-body"  ng-repeat="alert in alerts" >
+            <div class="alerts alert-{{alert.alertname}}">
+                <a class="fa fa-times icon-padding alert-btn" aria-hidden="true" href="#"></a>
+                <strong class="alert-strong">{{alert.alertname}}!</strong> {{alert.message}}
+            </div>
+        </div>
+    </div>
+</div>    
